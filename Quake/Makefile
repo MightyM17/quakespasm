@@ -286,6 +286,12 @@ OBJS := strlcat.o \
 # Linux build rules
 # ------------------------
 
+$(info    LINKER is $(LINKER))
+$(info    OBJS is $(OBJS))
+$(info    LDFLAGS is $(LDFLAGS))
+$(info    LIBS is $(LIBS))
+$(info    SDL_LIBS is $(SDL_LIBS))
+
 quakespasm:	$(OBJS)
 	$(LINKER) $(OBJS) $(LDFLAGS) $(LIBS) $(SDL_LIBS) -o $@
 	$(call do_strip,$@)
