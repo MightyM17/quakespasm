@@ -58,7 +58,7 @@ CFLAGS ?= -Wall -Wno-trigraphs
 CFLAGS += $(CPUFLAGS)
 ifneq ($(DEBUG),0)
 DFLAGS += -DDEBUG
-CFLAGS += -g -fwhole-program
+CFLAGS += -g -fuse-linker-plugin
 do_strip=
 else
 DFLAGS += -DNDEBUG
