@@ -633,7 +633,7 @@ static qboolean VID_SetMode (int width, int height, int refreshrate, int bpp, qb
 			draw_context = SDL_CreateWindow (caption, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, flags);
 		}
 		if (!draw_context)
-			Sys_Error ("Couldn't create window");
+			Sys_Error ("Couldn't create window: %s", SDL_GetError());
 
 		previous_display = -1;
 	}
